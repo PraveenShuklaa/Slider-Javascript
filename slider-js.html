@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Javascript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container img{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .container h1{
+            position: absolute;
+            bottom: 80px;
+            left: 45%;
+            background-color: #000000b8;
+            color: #f5f5f5;
+        }
+        .slide h1{
+            color: cornsilk;
+            position: absolute;
+            bottom: 100px;
+            left: 45%;
+            background-color: #00000070;
+        }
+        .slider{
+            position: absolute;
+            bottom: 25px;
+            left: 38%;
+        }
+        .page{
+            width: 80px;
+            height: 5px;
+            border-radius: 5px;
+            margin-left: 20px;
+            float: left;
+            cursor: pointer;
+            background-color: #cccbc565;
+        }
+        .page:hover{
+            border: 3px solid yellow;
+        }
+        #slideimg2, #slideimg3, #slideh12, #slideh13{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img alt="slide1" src="images/lighthouse-4846854_1280.jpg" id="slideimg1">
+            <h1 id="slideh11">First Slide</h1>
+        <img alt="slide2" src="images/winter-4842772_1280.jpg" id="slideimg2">
+            <h1 id="slideh12">Second Slide</h1>
+        <img alt="slide3" src="images/winter-4842908_1280.jpg" id="slideimg3">
+            <h1 id="slideh13">Third Slide</h1>
+        <div class="slider">
+            <div class="page" onclick="change(1)"></div>
+            <div class="page" onclick="change(2)"></div>
+            <div class="page" onclick="change(3)"></div>
+        </div>
+    </div>
+    <script>
+        function change(data){
+            if (data==1){
+               document.getElementById('slideimg1').style.display='block'; 
+               document.getElementById('slideh11').style.display='block'; 
+               document.getElementById('slideimg2').style.display='none'; 
+               document.getElementById('slideh12').style.display='none'; 
+               document.getElementById('slideimg3').style.display='none'; 
+               document.getElementById('slideh13').style.display='none'; 
+            } else  if (data==2){
+                document.getElementById('slideimg1').style.display='none'; 
+               document.getElementById('slideh11').style.display='none'; 
+               document.getElementById('slideimg2').style.display='block'; 
+               document.getElementById('slideh12').style.display='block'; 
+               document.getElementById('slideimg3').style.display='none'; 
+               document.getElementById('slideh13').style.display='none'; 
+            }
+            else {
+                document.getElementById('slideimg1').style.display='none'; 
+               document.getElementById('slideh11').style.display='none'; 
+               document.getElementById('slideimg2').style.display='none'; 
+               document.getElementById('slideh12').style.display='none'; 
+               document.getElementById('slideimg3').style.display='block'; 
+               document.getElementById('slideh13').style.display='block'; 
+            }
+        }
+    </script>
+</body>
+</html>
