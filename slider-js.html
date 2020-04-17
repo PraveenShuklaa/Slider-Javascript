@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Javascript</title>
+    <link rel="stylesheet" href="slider-js.css" />
+</head>
+<body>
+    <div class="container">
+        <img alt="slide1" src="images/lighthouse-4846854_1280.jpg" id="slideimg1">
+            <h1 id="slideh11">First Slide</h1>
+        <img alt="slide2" src="images/winter-4842772_1280.jpg" id="slideimg2">
+            <h1 id="slideh12">Second Slide</h1>
+        <img alt="slide3" src="images/winter-4842908_1280.jpg" id="slideimg3">
+            <h1 id="slideh13">Third Slide</h1>
+        <div class="slider">
+            <div class="page" onclick="change(1)"></div>
+            <div class="page" onclick="change(2)"></div>
+            <div class="page" onclick="change(3)"></div>
+        </div>
+    </div>
+    <script src="./slider-js.js"></script>
+</body>
+</html>
